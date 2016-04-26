@@ -142,13 +142,13 @@ i {
     }
     
     .brand {
-        flex: 2;
+        flex: 1;
         font-size: 2em;
         background: $white;
         
-        span {
-            font-size: .55em;
-            letter-spacing: 3px;
+        img {
+            height: 100px;
+            width: 100px;
         }
     }
     
@@ -573,98 +573,101 @@ i {
     }
 }
 
+#pricing {
+    height: 1000px;
+    
+    .grid-view {
+        display: flex;
+        justify-content: space-between;
+        
+        @media(max-width: 900px) {
+            flex-direction: column;
+        } 
+     
+        .panel {
+            position: relative;
+            flex: 1;
+            margin: 12px 20px;
+            transition: all 0.4s;
+            
+            @media(max-width: 900px) {
+                margin: 20px 12px 275px;
+            }
+            
+            &:hover {
+                transform: scale(1.1);
+                -webkit-box-shadow: 10px 10px 42px 5px rgba(0,0,0,0.75);
+                   -moz-box-shadow: 10px 10px 42px 5px rgba(0,0,0,0.75);
+                        box-shadow: 10px 10px 42px 5px rgba(0,0,0,0.75);
+                        
+                        @media(max-width: 900px) {
+                            transform: none;
+                            -webkit-box-shadow: none;
+                               -moz-box-shadow: none;
+                                    box-shadow: none;
+                        } 
+            }
+            
+            .panel-header {
+                position: absolute;
+                height: 75px;
+                line-height: 75px;
+                top: 0;
+                left: 0;
+                right: 0;
+                color: $white;
+                background: $primary-color;
+                
+                @media(max-width: 900px) {
+                    height: 45px;
+                    line-height: 45px;
+                }
+            }
+            
+            .panel-content {
+                position: absolute;
+                height: 300px;
+                padding: 0 12px;
+                top: 75px;
+                left: 0;
+                right: 0;
+                border: 1px solid $primary-color;
+                
+                @media(max-width: 900px) {
+                    height: 175px;
+                    top: 45px;
+                    
+                    p {
+                        text-align: center;
+                    }
+                }
+            }
+            
+            .panel-footer {
+                position: absolute;
+                height: 50px;
+                line-height: 50px;
+                top: 375px;
+                left: 0;
+                right: 0;
+                color: $white;
+                background: $primary-color;
+                
+                @media(max-width: 900px) {
+                    height: 35px;
+                    line-height: 35px;
+                    top: 220px;
+                }
+            } 
+        }
+    }
+}
+
 .clearfix {
     content: "";
     display: table;
     clear: both;
 }
-
-/* ---- Modal Animation ---- */
-
-// input[type = checkbox] {
-//     position: absolute;
-//     top: -1000px;
-// }
-
-// .modal-overlay {
-//     opacity: 0;
-//     z-index: -1000;
-//     transform: scale(.001);
-//     transition: all .75s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-// }
-
-// input:checked ~ .modal-overlay {
-//     opacity: 1;
-//     transform: scale(1);
-//     z-index: 1000;
-// }
-
-// /* ---- Modal Styles ---- */
-
-// .modal {
-//   background: $white;
-//   display: inline-block;
-//   padding: 1em;
-  
-//   .modal-overlay {
-//         background: rgba(0,0,0,.8);
-//         border-radius: 10px;
-//         top: 10px;
-//         left: 30%;
-//         right: 30%;
-//         position: fixed;
-//         text-align: center;
-//         text-shadow: none;
-//         z-index: 600;
-        
-//         .modal-wrap {
-//             p {
-//                 color: $azure;
-                
-//                 i {
-//                     transition: transform .4s;    
-//                 }
-                
-//                 a {
-//                     color: $azure;
-//                 }
-                
-//                 &:hover {
-//                     i {
-//                         transform: rotate(-20deg);
-//                     }
-                    
-//                     a {
-//                         border-bottom: 2px solid $azure;
-//                     }
-//                 }
-//             }
-//         }
-//     }
-// }
-
-// .modal-wrap i:hover {
-//     transform: rotate(-20deg);
-// }
-
-// .modal-wrap label {
-//   background: $primary-color;
-//   border-radius: 50%;
-//   color: $azure;
-//   cursor: pointer;
-//   display: inline-block;
-//   height: 1.5em;
-//   line-height: 1.5;
-//   position: absolute;
-//   right: .5em;
-//   top: .5em;
-//   width: 1.5em;
-//   transition: all ease 1s;
-// }
-
-// .modal-wrap label:hover {
-//     transform: rotate(900deg) scale(1.5);
-// }
 
 // Slide in Elements
 
@@ -701,4 +704,53 @@ i {
         opacity: 1;
         -webkit-transform: translateY(0%);
     }
-}  
+}
+
+/* ================================= 
+  Form Submission Styles
+==================================== */
+
+.email-success {
+    width: 80%;
+    height: 350px;
+    line-height: 350px;
+    border: 3px solid green;
+    border-radius: 20px;
+    background: rgba(0, 255, 0, 0.5);
+    margin: 100px auto;
+    text-align: center;
+    color: black;
+    font-size: 1.5em;
+    
+    @media(max-width: 900px) {
+        font-size: 1.35em;
+        line-height: 50px;
+        padding: 10px 20px;
+    }
+}
+
+.email-failure {
+    width: 80%;
+    height: 350px;
+    border: 3px solid red;
+    border-radius: 20px;
+    background: rgba(235, 0, 0, 0.6);
+    margin: 100px auto;
+    text-align: center;
+    color: $white;
+    font-size: 1.15em;
+    
+    span {
+        font-size: 1.5em;
+    }
+    
+    @media(max-width: 900px) {
+        font-size: .85em;
+        height: 60%;
+        padding: 10px 20px;
+        
+        span {
+            font-size: 1.15em;
+        }
+    }
+}   

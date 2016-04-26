@@ -95,7 +95,7 @@ i {
     letter-spacing: 3px;
     transition: all .55s; }
     .main-nav a:hover {
-      color: #00e5ee;
+      color: #00ccff;
       letter-spacing: 5px;
       cursor: pointer; }
       @media (max-width: 900px) {
@@ -110,12 +110,12 @@ i {
   .main-nav .nav {
     align-self: center; }
   .main-nav .brand {
-    flex: 2;
+    flex: 1;
     font-size: 2em;
     background: #fff; }
-    .main-nav .brand span {
-      font-size: .55em;
-      letter-spacing: 3px; }
+    .main-nav .brand img {
+      height: 100px;
+      width: 100px; }
   @media (max-width: 900px) {
     .main-nav {
       flex-direction: column; }
@@ -142,7 +142,7 @@ i {
     bottom: 0;
     height: 2px;
     width: 90px;
-    background: #00e5ee;
+    background: #00ccff;
     transition: all 0.3s ease-out;
     -webkit-transition: all 0.3s ease-out; }
   .menu:after, .menu:before {
@@ -193,7 +193,7 @@ i {
     cursor: pointer; }
     .menu-panel .menu-item:hover {
       letter-spacing: 8px;
-      color: #00e5ee; }
+      color: #00ccff; }
   .menu-panel span {
     position: absolute;
     display: block;
@@ -215,7 +215,7 @@ i {
       .menu-panel .icons a i {
         transition: color 0.4s; }
         .menu-panel .icons a i:hover {
-          color: #00e5ee; }
+          color: #00ccff; }
     .menu-panel .icons:before {
       position: absolute;
       left: 0;
@@ -414,12 +414,80 @@ i {
     #services .grid-view {
       flex-direction: column; } }
 
+#pricing {
+  height: 1000px; }
+  #pricing .grid-view {
+    display: flex;
+    justify-content: space-between; }
+    @media (max-width: 900px) {
+      #pricing .grid-view {
+        flex-direction: column; } }
+    #pricing .grid-view .panel {
+      position: relative;
+      flex: 1;
+      margin: 12px 20px;
+      transition: all 0.4s; }
+      @media (max-width: 900px) {
+        #pricing .grid-view .panel {
+          margin: 20px 12px 275px; } }
+      #pricing .grid-view .panel:hover {
+        transform: scale(1.1);
+        -webkit-box-shadow: 10px 10px 42px 5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 42px 5px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 42px 5px rgba(0, 0, 0, 0.75); }
+        @media (max-width: 900px) {
+          #pricing .grid-view .panel:hover {
+            transform: none;
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none; } }
+      #pricing .grid-view .panel .panel-header {
+        position: absolute;
+        height: 75px;
+        line-height: 75px;
+        top: 0;
+        left: 0;
+        right: 0;
+        color: #fff;
+        background: #818181; }
+        @media (max-width: 900px) {
+          #pricing .grid-view .panel .panel-header {
+            height: 45px;
+            line-height: 45px; } }
+      #pricing .grid-view .panel .panel-content {
+        position: absolute;
+        height: 300px;
+        padding: 0 12px;
+        top: 75px;
+        left: 0;
+        right: 0;
+        border: 1px solid #818181; }
+        @media (max-width: 900px) {
+          #pricing .grid-view .panel .panel-content {
+            height: 175px;
+            top: 45px; }
+            #pricing .grid-view .panel .panel-content p {
+              text-align: center; } }
+      #pricing .grid-view .panel .panel-footer {
+        position: absolute;
+        height: 50px;
+        line-height: 50px;
+        top: 375px;
+        left: 0;
+        right: 0;
+        color: #fff;
+        background: #818181; }
+        @media (max-width: 900px) {
+          #pricing .grid-view .panel .panel-footer {
+            height: 35px;
+            line-height: 35px;
+            top: 220px; } }
+
 .clearfix {
   content: "";
   display: table;
   clear: both; }
 
-/* ---- Modal Animation ---- */
 .slide-animation {
   visibility: hidden; }
 
@@ -444,5 +512,44 @@ i {
   100% {
     opacity: 1;
     -webkit-transform: translateY(0%); } }
+/* ================================= 
+  Form Submission Styles
+==================================== */
+.email-success {
+  width: 80%;
+  height: 350px;
+  line-height: 350px;
+  border: 3px solid green;
+  border-radius: 20px;
+  background: rgba(0, 255, 0, 0.5);
+  margin: 100px auto;
+  text-align: center;
+  color: black;
+  font-size: 1.5em; }
+  @media (max-width: 900px) {
+    .email-success {
+      font-size: 1.35em;
+      line-height: 50px;
+      padding: 10px 20px; } }
+
+.email-failure {
+  width: 80%;
+  height: 350px;
+  border: 3px solid red;
+  border-radius: 20px;
+  background: rgba(235, 0, 0, 0.6);
+  margin: 100px auto;
+  text-align: center;
+  color: #fff;
+  font-size: 1.15em; }
+  .email-failure span {
+    font-size: 1.5em; }
+  @media (max-width: 900px) {
+    .email-failure {
+      font-size: .85em;
+      height: 60%;
+      padding: 10px 20px; }
+      .email-failure span {
+        font-size: 1.15em; } }
 
 /*# sourceMappingURL=main.css.map */

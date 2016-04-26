@@ -18,6 +18,7 @@ $(document).ready(function(){
   
   NavScroll(".main-nav a");
   NavScroll(".menu-panel a");  
+  NavScroll(".main-footer a");
   
 }); //End smooth scroll navigation
 
