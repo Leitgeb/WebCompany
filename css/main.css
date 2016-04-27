@@ -210,7 +210,7 @@ i {
     display: flex;
     justify-content: center; }
     .menu-panel .icons a {
-      flex: 0;
+      flex: 1;
       color: #818181; }
       .menu-panel .icons a i {
         transition: color 0.4s; }
@@ -324,23 +324,33 @@ i {
   .main-footer input[type=text] {
     width: 93%;
     display: block;
-    color: #b4b4b4;
+    color: black;
     font-size: 1.3em;
     letter-spacing: 2px;
     margin-top: 20px;
     margin-left: 20px;
     padding-top: 5px;
     border: none;
+    border-radius: 7px;
     border-bottom: 1px solid #b4b4b4;
-    transition: all 0.3s ease;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 95%, #b4b4b4 5%);
-    background-position: -1000px 0;
-    background-size: 100% 100%;
-    background-repeat: no-repeat; }
+    background: #b4b4b4; }
+  .main-footer input[type=submit] {
+    color: #b4b4b4; }
   .main-footer ::-webkit-input-placeholder {
+    color: #fff;
     transition: transform 0.4s; }
   .main-footer :focus::-webkit-input-placeholder {
-    transform: translateY(-20px); }
+    transform: translateY(-28px); }
+  .main-footer ::-ms-input-placeholder {
+    color: #fff;
+    transition: transform 0.4s; }
+  .main-footer :focus::-ms-input-placeholder {
+    transform: translateY(-28px); }
+  .main-footer :-ms-input-placeholder {
+    color: #fff;
+    transition: transform 0.4s; }
+  .main-footer :focus:-ms-input-placeholder {
+    transform: translateY(-28px); }
   .main-footer textarea {
     font-size: 16px; }
   .main-footer textarea:focus {
